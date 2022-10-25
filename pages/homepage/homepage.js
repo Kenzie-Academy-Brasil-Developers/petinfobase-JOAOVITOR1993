@@ -50,6 +50,7 @@ const renderizarPosts = async (array) =>{
         const li = criarLi(post)
         ul.appendChild(li)
     })
+    
 }
 
 const criarLi = (post) =>{
@@ -73,23 +74,36 @@ const criarLi = (post) =>{
     pData.className = "dataLi"
     const data = new Date
     pData.innerText = data.toLocaleDateString()  
-    
+    h2.className = "tituloPost"
+    h2.innerText = post.title
+    pTexto.setAttribute('maxLength',145);
+    pTexto.className = "textoPost"
+    pTexto.innerText = post.content
+    botaoAcessar.className = "botaoAbrirPost botaoLinkAzul"
+    botaoAcessar.innerText = "Acessar publicação"
+
     if(JSON.parse(localStorage.getItem("@emailValidacao")) === post.user.email){
         const botaoEditar = document.createElement("button")
         const botaoExcluir = document.createElement("button")
         botaoEditar.className = "botaoEditar botaoPadraoPequeno botaoBranco"
         botaoEditar.innerText = "Editar"
+            
+        botaoEditar.addEventListener("click", ()=>{
+            const objeto ={
+                id: post.id,
+                title: post.title,
+                content: post.content
+            }
+            editarPost(objeto)
+        })
         botaoExcluir.className = "botaoExcluir botaoPadraoPequeno botaoCinza"
         botaoExcluir.innerText = "Excluir"
+
+        botaoExcluir.addEventListener("click", ()=>{
+            removerPost(post.id)
+        })
         divBotoes.append(botaoEditar, botaoExcluir)
     }
-
-    h2.className = "tituloPost"
-    h2.innerText = post.title
-    pTexto.className = "textoPost"
-    pTexto.innerText = post.content
-    botaoAcessar.className = "botaoAbrirPost botaoLinkAzul"
-    botaoAcessar.innerText = "Acessar publicação"
 
     botaoAcessar.addEventListener("click", ()=>{
         modalAbrirPost(post)
@@ -101,4 +115,6 @@ const criarLi = (post) =>{
     
     return li
 }
+
+
 

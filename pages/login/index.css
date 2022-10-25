@@ -131,3 +131,17 @@ form button{
     text-align: center;
     margin-bottom: 1.5rem;
 }
+
+.carregar{
+    animation: simboloSpinner 1s infinite linear;
+}
+
+@keyframes simboloSpinner{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}

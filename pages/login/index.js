@@ -20,7 +20,14 @@ const capturarValorInputLogin = () =>{
         }
     })
     botaoAcessar.addEventListener("click", (event)=>{
-        event.preventDefault()
+        event.preventDefault() 
+
+        botaoAcessar.innerHTML =""
+        const img = document.createElement("img")
+        img.src = "../../src/icons/spinner.png"
+        img.className = "carregar"
+        botaoAcessar.appendChild(img)
+
         const objeto = {
             email: inputEmail.value,
             password: inputSenha.value,

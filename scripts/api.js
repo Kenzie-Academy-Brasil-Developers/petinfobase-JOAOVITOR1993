@@ -42,8 +42,7 @@ const requisicaoCadastro = async (objeto) =>{
     })
     .then(resp => resp.json())
     .then(resp => {
-        const main = document.querySelector("main")
-        main.insertAdjacentHTML("beforeend", `
+        document.querySelector("main").insertAdjacentHTML("beforeend", `
         <section class="mensagemSucesso">
         <div>
             <img src="/src/icons/check.png" alt="">
@@ -100,5 +99,49 @@ const requisicaoCriarPost = async (token, objeto) =>{
     .catch(err => console.log(err))
 
     return post
+}
+
+const requisicaoAtualizarPost = async (id, token, objeto) =>{
+    const post = await fetch(`${url}/posts/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(objeto)
+    })
+    .then(resp => resp.json())
+    .then(resp => resp)
+    .catch(err => console.log(err))
+
+    return post
+}
+
+const requisicaoExcluirPost = async (id, token) =>{
+    const retorno = await fetch(`${url}/posts/${id}`, {
+        method: "DELETE",
+        headers:{
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then(resp => resp.json())
+    .then(resp => {
+        document.querySelector("main").insertAdjacentHTML("beforeend", `
+        <section class="mensagemSucesso">
+            <div>
+                <img src="/src/icons/check.png" alt="">
+                <h3>Post deletado com sucesso!</h3>
+            </div>
+            <p>O post selecionado para exclusão foi deletado, a partir de agora não aparecerá no seu feed</p>
+        </section>
+        `)
+        document.querySelector("html").addEventListener("click", () =>{
+            document.querySelector(".mensagemSucesso").classList.add("displayNone")
+        })
+    })
+    .catch(err => console.log(err))
+
+    return retorno
 }
 

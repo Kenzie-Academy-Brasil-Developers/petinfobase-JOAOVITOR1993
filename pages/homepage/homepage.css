@@ -1,0 +1,362 @@
+header{
+    width: 100%;
+    padding: 3.18rem 0;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+}
+
+header div h1{
+    font-size: 1.5rem;
+}
+
+header div div{
+    display: flex;
+    gap: 0.75rem;
+    position: relative;
+}
+
+.imgPerfilCabecalho{
+    width: 2.56rem;
+    height: 2.56rem;
+    border-radius: 50%;
+    border: solid 1px var(--brand1);
+    cursor: pointer;
+}
+
+body > div{
+    background-color: var(--gray8);
+    padding: 1.25rem 0;
+}
+
+body > div h2{
+    font-family: var(--text-2);
+}
+
+.ulPosts{
+    margin-top: 1.8rem;
+}
+
+.liPost{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.56rem;
+    margin-bottom: 4rem;
+}
+
+.cabecalho{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho > div{
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.cabecalho > div img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.cabecalho > div p:nth-child(2){
+    font-size: var(--text-4);
+    font-weight: 500;
+}
+
+.cabecalho > div p:nth-child(3){
+    font-size: var(--text-4);
+    font-weight: 500;
+    color: var(--gray4);
+    padding-left: 0.7rem;
+    border-left: solid 2px var(--gray6);
+}
+
+.tituloPost{
+   font-size: 1.5rem;
+}
+
+.textoPost{
+    font-size: var(--text-3);
+    color: var(--gray3);
+ }
+
+ 
+.modalPublicacao{
+    background-color: var(--gray9);
+    width: 50rem;  
+    padding: 1.87rem;
+    border-radius: var(--radius-2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.56rem;
+    margin: 2.31rem auto;
+}
+
+.modalEditarPost{
+    background-color: var(--gray9);
+    width: 50rem;  
+    padding: 1.87rem;
+    border-radius: var(--radius-2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.56rem;
+    margin: 2.31rem auto;
+}
+
+.modalEditarPost div:nth-child(1){
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalEditarPost div h2{
+    font-size: var(--text-2);
+}
+
+.modalEditarPost div:nth-child(2){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modalEditarPost div label{
+    font-size: var(--text-3);
+    font-weight: 600;
+}
+
+.modalEditarPost div input{
+    font-size: var(--text-3);
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    border: solid 1px var(--gray6);
+    border-radius: var(--radius);
+    background-color: var(--gray8);
+}
+
+.modalEditarPost div input:focus{
+    outline: solid 1px var(--gray1);
+}
+
+.modalEditarPost div input::placeholder{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-3);
+    color: var(--gray4);
+}
+
+.modalEditarPost div:nth-child(3){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modalEditarPost div textarea{
+    font-size: var(--text-3);
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    border: solid 1px var(--gray6);
+    border-radius: var(--radius);
+    background-color: var(--gray8);
+}
+
+.modalEditarPost div textarea:focus{
+    outline: solid 1px var(--gray1);
+}
+
+.modalEditarPost div textarea::placeholder{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-3);
+    color: var(--gray4);
+}
+
+.modalEditarPost div:nth-child(4){
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+
+.modalCriarPost{
+    background-color: var(--gray9);
+    width: 50rem;  
+    padding: 1.87rem;
+    border-radius: var(--radius-2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.56rem;
+    margin: 2.31rem auto;
+}
+
+.modalCriarPost div:nth-child(1){
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalCriarPost div h2{
+    font-size: var(--text-2);
+}
+
+.modalCriarPost div:nth-child(2){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modalCriarPost div label{
+    font-size: var(--text-3);
+    font-weight: 600;
+}
+
+.modalCriarPost div input{
+    font-size: var(--text-3);
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    border: solid 1px var(--gray6);
+    border-radius: var(--radius);
+    background-color: var(--gray8);
+}
+
+.modalCriarPost div input:focus{
+    outline: solid 1px var(--gray1);
+}
+
+.modalCriarPost div input::placeholder{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-3);
+    color: var(--gray4);
+}
+
+.modalCriarPost div:nth-child(3){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modalCriarPost div textarea{
+    font-size: var(--text-3);
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    border: solid 1px var(--gray6);
+    border-radius: var(--radius);
+    background-color: var(--gray8);
+}
+
+.modalCriarPost div textarea:focus{
+    outline: solid 1px var(--gray1);
+}
+
+.modalCriarPost div textarea::placeholder{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-3);
+    color: var(--gray4);
+}
+
+.modalCriarPost div:nth-child(4){
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.modalExcluirPost{
+    background-color: var(--gray9);
+    width: 50rem;  
+    padding: 1.87rem;
+    border-radius: var(--radius-2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.85rem;
+    margin: 2.31rem auto;
+}
+
+.modalExcluirPost div:nth-child(1){
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalExcluirPost div h2{
+    font-size: var(--text-2);
+}
+
+.modalExcluirPost div h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modalExcluirPost div p{
+    font-size: var(--text-3);
+    margin-bottom: 1rem;
+}
+
+.modalExcluirPost div:nth-child(3){
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.sairDaConta{
+    display:none;
+    flex-direction: column;
+    gap: 0.56rem;
+    width: 13.4rem;
+    background-color: var(--gray9);
+    border-radius: var(--radius) var(--radius) 0 0;
+    position: absolute;
+    top: 2.6rem;
+}
+
+.displayFlex{
+    display: flex;
+}
+
+.sairDaConta p{
+    font-size: var(--text-3);
+    font-weight: 500;
+    padding: 1.37rem 1.06rem 0.56rem 1.06rem;
+}
+
+.sairDaConta div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.37rem 1.06rem;
+    transition: 0.6s;
+}
+
+.sairDaConta div:hover{
+    background-color:var(--gray7);
+    transition: 0.6s;
+}
+
+
+.sairDaConta div img{
+    width: 0.87rem;
+    height: 0.87rem;
+}
+
+.sairDaConta div button{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-4);
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+}

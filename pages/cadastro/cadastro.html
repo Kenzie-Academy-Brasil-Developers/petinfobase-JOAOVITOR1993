@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/globalStyles.css">
+    <link rel="stylesheet" href="/pages/cadastro/cadastro.css">
+    <link rel="stylesheet" href="/styles/buttons.css">
+    <title>Petinfo - Cadastro</title>
+</head>
+<body>
+    <main class="container">
+        <section class="cadastro">
+            <div>
+                <h3>Cadastro</h3>
+                <button class="botaoVoltar1 botaoPadraoPequeno botaoBranco">Voltar para o login</button>
+            </div>
+            <form>
+                <div class="divInputs">
+                    <label for="usuario">Usuário</label>
+                    <input class="inputNomeCadastro" type="text" name="usuario" placeholder="Digite seu usuário aqui" required="true">
+               </div>
+               <div class="divInputs">
+                    <label for="email">Email</label>
+                    <input class="inputEmailCadastro" type="email" name="email" placeholder="Digite seu email aqui" required="true">
+               </div>
+               <div class="divInputs">
+                <label for="linkImg">Link da foto do perfil</label>
+                <input class="inputFotoCadastro" type="url" name="linkImg" placeholder="Insira o link aqui" required="true">
+                </div>
+               <div class="divInputs">
+                    <label for="senha">Senha</label>
+                    <input class="inputSenhaCadastro" name="senha"type="password" placeholder="Digite sua senha aqui" required="true">
+               </div>
+               <button class="botaoCadastrar botaoPadrao botaoAzul" type="submit">Cadastrar</button>
+            </form>
+            <button class="botaoVoltar2 botaoPadrao botaoBranco">Voltar para o login</button>
+        </section>
+        <section class="petinfo">
+            <h1>Petinfo</h1>
+            <h2>Ooooooba!</h2>
+            <div class="textoEImg">
+                <p>Agora vamos poder contribuir para o bem estar do seu pet por meio do conhecimento</p>
+                <div class="caixaImg1">
+                    <img src="/src/img/Rectangle 2.png" alt="">
+                    <div class="caixaImg2">
+                        <div class="caixaImg3">
+                            <img src="/src/img/Rectangle 3.png" alt="">
+                            <img src="/src/img/Rectangle 5.png" alt="">
+                        </div>
+                        <img src="/src/img/Rectangle 4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/scripts/api.js"></script>
+    <script src="/pages/cadastro/cadastro.js"></script>
+</body>
+</html>

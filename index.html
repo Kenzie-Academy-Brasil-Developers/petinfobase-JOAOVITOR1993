@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/globalStyles.css">
+    <link rel="stylesheet" href="./pages/login/index.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <title>Petinfo - Login</title>
+</head>
+<body>
+    <main class="container">
+        <section class="petinfo">
+            <h1>Petinfo</h1>
+            <h2><span>Amor</span> e <span>carinho</span> por meio do conhecimento</h2>
+            <div class="textoEImg">
+                <p>Todas as informações para melhorar a vida do seu pet em um só lugar</p>
+                <div class="caixaImg1">
+                    <div class="caixaImg2">
+                        <div class="caixaImg3">
+                            <img src="./src/img/Rectangle 7.png" alt="">
+                            <img src="./src/img/Rectangle 8.png" alt="">
+                        </div>
+                        <img src="./src/img/Rectangle 6.png" alt="">
+                    </div>
+                    <img src="./src/img/Rectangle 9.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="login">
+            <h3>Login</h3>
+            <form>
+               <div class="divInputs">
+                    <label for="email">Email</label>
+                    <input class="inputEmail" type="email" name="email" placeholder="Digite seu email aqui" required="true">
+               </div>
+               <div class="divInputs">
+                    <label for="senha">Senha</label>
+                    <input class="inputSenha" name="senha"type="password" placeholder="Digite sua senha aqui" required="true">
+               </div>
+               <div class="divAlertaSenha"></div>
+               <button class="botaoAcessar botaoAzulDesabilitado" type="submit">Acessar</button>
+            </form>
+            <p>Ainda não possui conta?</p>
+            <p>Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
+            <button class="botaoCadastrar botaoPadrao botaoBranco">Cadastrar</button>
+        </section>
+    </main>
+    <script src="/scripts/api.js"></script>
+    <script src="/pages/login/index.js"></script>
+</body>
+</html>

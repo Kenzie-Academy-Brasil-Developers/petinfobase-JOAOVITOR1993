@@ -1,0 +1,96 @@
+.botaoPadrao{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-3);
+    font-weight: 500;
+    padding: 0.43rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.botaoPadraoPequeno{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-4);
+    font-weight: 500;
+    padding: 0.34rem 0.5rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.botaoAzul{
+    background-color: var(--brand1);
+    border: solid 1px var(--brand1);
+    color: var(--gray9);
+    transition: 0.6s;
+}
+
+.botaoAzul:hover{
+    background-color: var(--brand2);
+    transition: 0.6s;
+}
+
+.botaoAzulDesabilitado{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-3);
+    font-weight: 500;
+    padding: 0.43rem 1rem;
+    border-radius: var(--radius);
+    background-color:  #6170b9;
+    border: solid 1px #6170b9;
+    color:#e6e6e6;
+}
+
+.botaoCinza{
+    background-color: var(--gray7);
+    border: solid 1px var(--gray7);
+    color: var(--gray4);
+    transition: 0.6s;
+}
+
+.botaoCinza:hover{
+    background-color: var(--gray6);
+    border: solid 1px var(--gray6);
+    color: var(--gray3);
+    transition: 0.6s;
+}
+
+.botaoBranco{
+    background-color: var(--gray9);
+    border: solid 1px var(--gray6);
+    color: var(--gray1);
+    transition: 0.6s;
+}
+
+.botaoBranco:hover{
+    background-color: var(--gray8);
+    transition: 0.6s;
+}
+
+.botaoLinkAzul{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: var(--text-3);
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--gray9);
+    border: transparent;
+    border-bottom: solid 1px transparent;
+    color: var(--brand1);
+    transition: 0.6s;
+}
+
+.botaoLinkAzul:hover{
+    border-bottom: solid 1px var(--brand2);
+    color: var(--brand2);
+    transition: 0.6s;
+}
+
+.botaoVermelho{
+    background-color: var(--alert1);
+    border: solid 1px var(--alert1);
+    color: var(--gray9);
+    transition: 0.6s;
+}
+
+.botaoVermelho:hover{
+    background-color: var(--alert2);
+    transition: 0.6s;
+}

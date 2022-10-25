@@ -1,1 +1,133 @@
-/* Desenvolva a estilização da sua página aqui */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+.petinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 24rem;
+    height: 29rem;
+}
+
+.petinfo h1{
+    font-size: var(--text-1);
+}
+
+.petinfo h2{
+    font-size: var(--text-1);
+}
+
+.petinfo h2 span{
+    font-size: var(--text-1);
+    color: var(--brand1);
+}
+
+.textoEImg{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.textoEImg p{
+    font-size: var(--text-3);
+    color: var(--gray3);
+}
+
+.caixaImg1{
+    display: flex;
+    gap: 1.12rem;
+}
+
+.caixaImg2{
+    display: flex;
+    flex-direction: column;
+    gap: 1.12rem;
+}
+
+.caixaImg3{
+    display: flex;
+    flex-direction:row;
+    gap: 1.12rem;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    padding: 2.75rem 1.5rem;
+    border: solid 1px var(--gray6);
+    border-radius: var(--radius);
+}
+
+.login h3{
+    font-size: var(--text-2);
+}
+
+.divInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1.62rem;
+}
+
+form div label{
+    font-size: var(--text-3);
+    font-weight: 600;
+}
+
+form div input{
+    border: solid 1px var(--gray6);
+    border-radius: var(--radius);
+    background-color: var(--gray8);
+    padding: 0.62rem 1rem;
+}
+
+form div input:focus{
+    outline: solid 1px var(--gray1);
+}
+
+form div input::placeholder{
+    color: var(--gray4);
+}
+
+.divAlertaSenha{
+    margin-top: 0.75rem;
+    margin-bottom: 1.6rem;
+    height: 1.37rem;
+}
+
+.senhaIncorretaInput{
+    border: solid 1px var(--alert1);
+}
+
+.senhaIncorreta{
+    font-size: var(-text-4);
+    color: var(--alert1);
+}
+
+form button{
+   width: 100%;
+   margin-bottom: 1.6rem;
+}
+
+.login p:nth-child(3){
+    font-size: var(--text-4);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.login p:nth-child(4){
+    font-size: var(--text-4);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}

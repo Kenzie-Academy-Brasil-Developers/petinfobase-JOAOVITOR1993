@@ -66,7 +66,7 @@ const modalAbrirPost = (objeto) =>{
         <div>
             <img class="imgPerfil" src="${objeto.user.avatar}" alt="">
             <p class="nomeLi">${objeto.user.username}</p>
-            <p class="dataLi"></p>
+            <p class="dataLi">${renderizarData(objeto)}</p>
         </div>
         <button class="fecharModalPost botaoPadraoPequeno botaoCinza">X</button>
         </div>
@@ -74,9 +74,6 @@ const modalAbrirPost = (objeto) =>{
         <p class="textoPost">${objeto.content}</p>
         </div>
         `)
-        const data = new Date
-        const pData = document.querySelector(".dataLi")
-        pData.innerText = data.toLocaleDateString()
 
         document.querySelector(".fecharModalPost").addEventListener("click", ()=>{
             sectionModal.className = "modal"

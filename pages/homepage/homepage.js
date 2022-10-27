@@ -30,16 +30,25 @@ const cardSair = () =>{
 }
 cardSair()
 
+
 const renderizaPerfil = (objeto) =>{
     const imgPerfilCabecalho = document.querySelector(".imgPerfilCabecalho")
     const emailPerfilCabecalho = document.querySelector(".sairEmail")
-
+    
     imgPerfilCabecalho.src = objeto.avatar
     emailPerfilCabecalho.innerText = objeto.email
     localStorage.setItem("@emailValidacao", JSON.stringify(objeto.email))
     
     const token = buscarToken()
     requisicaoBuscarPosts(token.token)
+}
+
+const renderizarData = (post) =>{
+    const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    const data = new Date(post.createdAt)
+    let mes = meses[data.getMonth()]
+
+    return `${mes} de ${data.getFullYear()}`
 }
 
 const renderizarPosts = async (array) =>{
@@ -72,8 +81,7 @@ const criarLi = (post) =>{
     pNome.className = "nomeLi"
     pNome.innerText = post.user.username
     pData.className = "dataLi"
-    const data = new Date
-    pData.innerText = data.toLocaleDateString()  
+    pData.innerText = renderizarData(post)
     h2.className = "tituloPost"
     h2.innerText = post.title
     pTexto.setAttribute('maxLength',145);
@@ -115,6 +123,5 @@ const criarLi = (post) =>{
     
     return li
 }
-
 
 

@@ -42,15 +42,17 @@ const requisicaoCadastro = async (objeto) =>{
     })
     .then(resp => resp.json())
     .then(resp => {
-        document.querySelector("main").insertAdjacentHTML("beforeend", `
-        <section class="mensagemSucesso">
-        <div>
-            <img src="/src/icons/check.png" alt="">
-            <h3>Sua conta foi criada com sucesso!</h3>
-        </div>
-        <p>Agora você pode acessar os conteúdos utilizando seu usuário e senha na página de login: <a href="/index.html">Acessar página de login</a></p>
-        </section>
-        `)
+        if(resp.id){
+            document.querySelector("main").insertAdjacentHTML("beforeend", `
+            <section class="mensagemSucesso">
+            <div>
+                <img src="/src/icons/check.png" alt="">
+                <h3>Sua conta foi criada com sucesso!</h3>
+            </div>
+            <p>Agora você pode acessar os conteúdos utilizando seu usuário e senha na página de login: <a href="/index.html">Acessar página de login</a></p>
+            </section>
+            `)
+        }
     })
     .catch(err => console.log(err))
 }
@@ -127,18 +129,20 @@ const requisicaoExcluirPost = async (id, token) =>{
     })
     .then(resp => resp.json())
     .then(resp => {
-        document.querySelector("main").insertAdjacentHTML("beforeend", `
-        <section class="mensagemSucesso">
-            <div>
-                <img src="/src/icons/check.png" alt="">
-                <h3>Post deletado com sucesso!</h3>
-            </div>
-            <p>O post selecionado para exclusão foi deletado, a partir de agora não aparecerá no seu feed</p>
-        </section>
-        `)
-        document.querySelector("html").addEventListener("click", () =>{
-            document.querySelector(".mensagemSucesso").classList.add("displayNone")
-        })
+        if(resp.message === "Post deletado com sucesso"){
+            document.querySelector("main").insertAdjacentHTML("beforeend", `
+            <section class="mensagemSucesso">
+                <div>
+                    <img src="/src/icons/check.png" alt="">
+                    <h3>Post deletado com sucesso!</h3>
+                </div>
+                <p>O post selecionado para exclusão foi deletado, a partir de agora não aparecerá no seu feed</p>
+            </section>
+            `)
+            document.querySelector("html").addEventListener("click", () =>{
+                document.querySelector(".mensagemSucesso").classList.add("displayNone")
+            })
+        }
     })
     .catch(err => console.log(err))
 

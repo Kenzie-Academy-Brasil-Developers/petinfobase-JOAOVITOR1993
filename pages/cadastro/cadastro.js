@@ -10,40 +10,52 @@ const capturarValorInputs = () =>{
     botaoCadastrar.className = "botaoAcessar botaoAzulDesabilitado"
     
     inputNome.addEventListener("keypress", ()=>{
-        if(inputNome.value !== ""){
+        if(inputNome.value !== "" && inputEmail.value !== "" && inputFoto.value !== "" && inputSenha.value !== ""){
             botaoCadastrar.disabled = false
             botaoCadastrar.className = "botaoAcessar botaoPadrao botaoAzul"
         }
     })
     inputEmail.addEventListener("keypress", ()=>{
-        if(inputEmail.value !== ""){
+        if(inputNome.value !== "" && inputEmail.value !== "" && inputFoto.value !== "" && inputSenha.value !== ""){
             botaoCadastrar.disabled = false
             botaoCadastrar.className = "botaoAcessar botaoPadrao botaoAzul"
         }
     })
     inputFoto.addEventListener("keypress", ()=>{
-        if(inputFoto.value !== ""){
+        if(inputNome.value !== "" && inputEmail.value !== "" && inputFoto.value !== "" && inputSenha.value !== ""){
             botaoCadastrar.disabled = false
             botaoCadastrar.className = "botaoAcessar botaoPadrao botaoAzul"
         }
     })
     inputSenha.addEventListener("keypress", ()=>{
-        if(inputSenha.value !== ""){
+        if(inputNome.value !== "" && inputEmail.value !== "" && inputFoto.value !== "" && inputSenha.value !== ""){
             botaoCadastrar.disabled = false
             botaoCadastrar.className = "botaoAcessar botaoPadrao botaoAzul"
         }
     })
+
+
     botaoCadastrar.addEventListener("click", (event)=>{
         event.preventDefault()
-        const objeto = {
-            username: inputNome.value,
-            email: inputEmail.value,
-            password: inputSenha.value,
-            avatar: inputFoto.value
+        if(inputNome.value !== "" && inputEmail.value !== "" && inputFoto.value !== "" && inputSenha.value !== ""){
+            const objeto = {
+                username: inputNome.value,
+                email: inputEmail.value,
+                password: inputSenha.value,
+                avatar: inputFoto.value
+            }
+            requisicaoCadastro(objeto)
+        }else{
+            document.querySelector("main").insertAdjacentHTML("beforeend", `
+            <section class="mensagemErro">
+            <div>
+                <p>X</p>
+                <h3>Ops, você esqueceu de preencher algum campo :( </h3>
+            </div>
+            </section>
+            `)
         }
-        requisicaoCadastro(objeto)
     })
-   
 }
 capturarValorInputs()
 

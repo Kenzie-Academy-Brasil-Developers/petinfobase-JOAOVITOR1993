@@ -119,3 +119,40 @@ form div input::placeholder{
     gap: 1.12rem;
 }
 
+.mensagemErro{
+    display:flex;
+    flex-direction: column;
+    background-color: var(--gray9);
+    gap: 1.06rem;
+    padding: 1.31rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.1);
+    width: 32rem;
+    margin: 1.75rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    animation: animacaoSucesso 0.6s; 
+}
+
+.mensagemErro div{
+    display:flex;
+    gap: 0.75rem;
+  }
+  
+  .mensagemErro div p{
+    font-size: var(--text-4);
+    font-weight: 700;
+    padding: 0.28rem;
+    border-radius: 50%;
+    color: var(--gray9);
+    background-color: var(--alert1);
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+  }
+  
+  .mensagemErro div h3{
+    color: var(--alert1);
+    font-size: var(--text-3);
+  }

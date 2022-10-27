@@ -141,6 +141,9 @@ form div input::placeholder{
   }
   
   .mensagemErro div p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: var(--text-4);
     font-weight: 700;
     padding: 0.28rem;
@@ -149,7 +152,6 @@ form div input::placeholder{
     background-color: var(--alert1);
     width: 1.5rem;
     height: 1.5rem;
-    text-align: center;
   }
   
   .mensagemErro div h3{
